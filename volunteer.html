@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteer Sign-Up | Pearls of Hope</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(219, 112, 147); /* palevioletred */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: rgb(255, 182, 193); /* light pink */
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: rgb(138, 74, 85);
+    }
+
+    
+
+    form {
+      background-color: rgb(255, 255, 255);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid rgb(204, 204, 204);
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: rgb(199, 21, 133);
+      color: white;
+      padding: 12px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: rgb(176, 23, 102);
+    }
+
+    .back-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #970d67;
+    }
+
+    .back-link a:hover {
+      color: #8c2a6f;}
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+
+      form {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Volunteer Sign-Up Form</h1>
+    
+
+    <form action="https://formspree.io/f/xgvkqnry" method="post" onsubmit="return showAlert();">
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="skills">Skills / Interests:</label>
+      <textarea id="skills" name="skills" rows="4" placeholder="Tell us how you’d like to help"></textarea>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+   <div class="back-link">
+    <a href="pearl.html">← Back to Home</a>
+  </div>
+
+  <script>
+    function showAlert() {
+      alert("Thank you! Your message has been sent.");
+      return true;
+    }
+  </script>
+
+</body>
+</html>

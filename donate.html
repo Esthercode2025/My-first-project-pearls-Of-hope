@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate – Pearls of Hope Foundation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .donation-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .donation-box h2 {
+      color: #b03e88;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+/*form*/
+    form input, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #b03e88;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #8c2a6f;
+    }
+/*link*/
+    .back-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #b03e88;
+    }
+
+    .back-link a:hover {
+      color: #8c2a6f;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="donation-box">
+    <h2>Pearls of Hope</h2>
+    <form id="donationForm">
+      <input type="text" id="name" placeholder="Your Full Name" required />
+      <input type="email" id="email" placeholder="Your Email Address" required />
+      <input type="number" id="amount" placeholder="Amount (₦)" min="100" required />
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
+
+  <div class="back-link">
+    <a href="pearl.html">← Back to Home</a>
+  </div>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    document.getElementById("donationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const amount = document.getElementById("amount").value;
+
+      if (!name || !email || !amount || parseInt(amount) < 100) {
+        alert("Please fill all fields and enter ₦100 or more.");
+        return;
+      }
+
+      const handler = PaystackPop.setup({
+        key: 'pk_test_ad8f0e1d98a69176593e4ef03ccb172b53bc9be8', // Replace with your live key in production
+        email: email,
+        amount: parseInt(amount) * 100,
+        currency: "NGN",
+        ref: 'POH_' + Math.floor(Math.random() * 1000000000),
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Donor Name",
+              variable_name: "donor_name",
+              value: name
+            }
+          ]
+        },
+        callback: function(response) {
+          alert("Thank you for your donation! Reference: " + response.reference);
+        },
+        onClose: function() {
+          alert("Donation popup closed.");
+        }
+      });
+
+      handler.openIframe();
+    });
+  </script>
+
+</body>
+</html>

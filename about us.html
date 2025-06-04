@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Pearls of Hope</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    /*  Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: rgb(243, 225, 230);
+      color: rgb(50, 45, 48);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: rgb(199, 21, 133);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      font-weight: 500;
+      color: rgb(50, 45, 48);
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: rgb(199, 21, 133);
+    }
+
+
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
+      }
+
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: rgb(255, 255, 255);
+      padding: 50px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(199, 21, 133, 0.15);
+    }
+
+    .container h2 {
+      font-size: 2.5rem;
+      color: rgb(199, 21, 133);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .responsive-img {
+      width: 60%;
+      height: auto;
+      display: block;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: rgb(199, 21, 133);
+      font-size: 1.3rem;
+    }
+
+    .values ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .values li {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .container h2 {
+        font-size: 2rem;
+      }
+
+      .responsive-img {
+        width: 80%;
+      }
+
+      .container p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container h2 {
+        font-size: 1.6rem;
+      }
+
+      .container p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Pearls of Hope</div>
+      <div class="nav-links">
+        <a href="pearl.html">Home</a>
+        <a href="about us.html">About</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Us Section -->
+  <section class="section">
+    <div class="container">
+      <h2>About Us</h2>
+
+      <img class="responsive-img" src="/photorealistic-style-portrait-young-people-with-braids-hairstyle.jpg" alt="Teen girls smiling together" />
+
+      <p>
+        Pearls of Hope Foundation is a community-driven nonprofit dedicated to supporting teen mothers and young girls (ages 13–17) who face life’s toughest challenges. We believe every girl deserves a second chance and every teen mom deserves support, not shame.
+      </p>
+
+      <p>
+        Our mission is to empower, educate, and equip young girls and teen moms to overcome obstacles and build brighter, healthier futures. Through mentorship, maternal health support, menstrual hygiene awareness, and emotional care, we offer a nurturing space where girls can grow.
+      </p>
+
+      <p>
+        At Pearls of Hope, we walk with girls through their healing journey helping them rise with confidence, self-worth, and purpose.
+      </p>
+
+      <div class="values">
+        <h3>Vision:</h3>
+        <p>
+          A world where no teen girl is left behind,where every one rises strong, hopeful, and empowered.
+        </p>
+
+        <h3>Mission:</h3>
+        <p>
+          To restore hope and dignity to the lives of teen moms and young girls through compassion, education, and practical support.
+        </p>
+
+        <h3>What We Stand For:</h3>
+        <ul>
+          <li>Love without judgment</li>
+          <li>Support over stigma</li>
+          <li>Education for empowerment</li>
+          <li>Healing through community</li>
+        </ul>
+
+        <p><strong>Every girl is a pearl. Even in rough waters, she can shine.</strong></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

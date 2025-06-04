@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentor Registration Form | Pearls of Hope</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(219, 112, 147);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: rgb(255, 182, 193);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: rgb(138, 74, 85);
+    }
+
+    
+
+    form {
+      background-color: rgb(255, 255, 255);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid rgb(204, 204, 204);
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: rgb(199, 21, 133);
+      color: white;
+      padding: 12px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: rgb(176, 23, 102);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+
+      form {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+
+    .back-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #550b3b;
+    }
+
+    .back-link a:hover {
+      color: #8c2a6f;}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Mentor Registration Form</h1>
+    
+    <form action="https://formspree.io/f/mnndrwbw" method="post" enctype="multipart/form-data" onsubmit="return showAlert();">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address">Home Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="occupation">Current Occupation/Profession:</label>
+      <input type="text" id="occupation" name="occupation" required>
+
+      <label for="experience">Do you have any previous mentoring experience?</label>
+      <textarea id="experience" name="experience" rows="3"></textarea>
+
+      <label for="area">Areas You’d Like to Mentor In:</label>
+      <input type="text" id="area" name="area" placeholder="e.g. Mental Health, Education, Parenting" required>
+
+      <label for="availability">Your Availability (Days & Time):</label>
+      <textarea id="availability" name="availability" rows="3" required></textarea>
+
+      <label for="reason">Why do you want to become a mentor?</label>
+      <textarea id="reason" name="reason" rows="5" required></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+
+   <div class="back-link">
+    <a href="pearl.html">← Back to Home</a>
+  </div>
+
+
+  <script>
+    function showAlert() {
+      alert("Thank you! Your message has been sent. we will reach out to you soon ");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
